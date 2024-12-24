@@ -1,7 +1,7 @@
 /**
  * MIT License
 
- * Copyright (c) 2024 Thomas Stoll
+ * Copyright (c) 2024 Thomas Stoll (Gemelon)
 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -101,6 +101,7 @@ typedef struct
 
 static const char *TAG = "LILYGO";
 
+// initialization sequence for the LILYGO T-Display S3
 static const lcd_cmd_t lcd_st7789v[] = {
     {0x11, {0}, 0 | 0x80},
     {0x3A, {0X05}, 1},
