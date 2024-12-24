@@ -1,32 +1,18 @@
-# _Sample project_
+# _LilyTest_S3 project_
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+This is an example of using LVGL 9, ESP-IDF and EEZ Studio with a LILYGO T-Display S3.
 
-This is the simplest buildable example. The example is used by command `idf.py create-project`
-that copies the project to user specified path and set it's name. For more information follow the [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project)
+So far I have not found a working example of the Lilygo T-Display S3 that works with the new LVGL 9 version and the new ESP-IDF version 5. I then tried to find out the basics of operating the display with the new software versions myself.
 
+Here is the result of my efforts.
 
+This does not claim to be complete and it may contain errors, as I am still a beginner in the area of ​​LVGL and ESP-IDF. But I hope that it can help to put one or another on the right track.
 
-## How to use example
-We encourage the users to use the example as a template for the new projects.
-A recommended way is to follow the instructions on a [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project).
+# isueses
+I haven't found a solution for the problem yet. My quick n dirty solution ist to change this row simply to #include "../../../main/lv_conf.h"
 
-## Example folder contents
+D:/Projekte/Projekte 2025/GitHub/LilyTest_S3/managed_components/lvgl__lvgl/src/lv_conf_internal.h:58:18: fatal error: lv_conf.h: No such file or directory
+   58 |         #include "lv_conf.h"
+      |                  ^~~~~~~~~~~
 
-The project **sample_project** contains one source file in C language [main.c](main/main.c). The file is located in folder [main](main).
-
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt`
-files that provide set of directives and instructions describing the project's source files and targets
-(executable, library, or both). 
-
-Below is short explanation of remaining files in the project folder.
-
-```
-├── CMakeLists.txt
-├── main
-│   ├── CMakeLists.txt
-│   └── main.c
-└── README.md                  This is the file you are currently reading
-```
-Additionally, the sample project contains Makefile and component.mk files, used for the legacy Make based build system. 
-They are not used or needed when building with CMake and idf.py.
+      #include "../../../main/lv_conf.h"
