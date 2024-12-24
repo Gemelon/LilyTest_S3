@@ -8,7 +8,7 @@ Here is the result of my efforts.
 
 This does not claim to be complete and it may contain errors, as I am still a beginner in the area of ​​LVGL and ESP-IDF. But I hope that it can help to put one or another on the right track.
 
-# isueses
+# issues
 I haven't found a solution for the problem yet. My quick n dirty solution ist to change this row simply to #include "../../../main/lv_conf.h"
 
 D:/Projekte/Projekte 2025/GitHub/LilyTest_S3/managed_components/lvgl__lvgl/src/lv_conf_internal.h:58:18: fatal error: lv_conf.h: No such file or directory
